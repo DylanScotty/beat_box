@@ -31,7 +31,12 @@ RSpec.describe Node do
         expect(list.to_string).to eq("doop")
     end
 
+    it 'can create a new linked list' do
+        list = LinkedList.new
+        expect(list).to be_a_instance_of(LinkedList)
+    end
 
+    
 
 
 end
