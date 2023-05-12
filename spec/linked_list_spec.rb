@@ -88,7 +88,11 @@ RSpec.describe Node do
         expect(list.to_string).to eq("doop deep")
     end
 
-
+    it 'appends a node with the data "plop"' do 
+        list = LinkedList.new
+        list.append("plop")
+        expect(list.append("plop")).to eq("plop")
+    end
 
 
 end
