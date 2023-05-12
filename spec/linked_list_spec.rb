@@ -8,12 +8,12 @@ RSpec.describe Node do
         expect(list.head).to eq(nil)
     end
 
-    it 'will return "doop"' do
+    it 'it can append beats' do
         list = LinkedList.new
         expect(list.append("doop")).to eq("doop")
     end
 
-    it 'next node should have nil"' do
+    it 'will have next node after head to return nil"' do
         list = LinkedList.new
         list.append("doop")
         expect(list.head.next_node).to eq(nil)
@@ -23,6 +23,12 @@ RSpec.describe Node do
         list = LinkedList.new
         list.append("doop")
         expect(list.count).to eq(1)
+    end
+
+    it 'can return a string of all data' do
+        list = LinkedList.new
+        list.append("doop")
+        expect(list.to_string).to eq("doop")
     end
 
 
