@@ -107,4 +107,11 @@ RSpec.describe Node do
         expect(list.append("suu")).to eq("suu")
     end
 
+    it 'prepends a node with the data "dop"' do
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        expect(list.prepend("dop")).to eq("dop")
+    end
+
 end

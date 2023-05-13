@@ -14,6 +14,13 @@ class LinkedList
         data
     end
 
+    def prepend(data)
+        new_node = Node.new(data)
+        new_node.next_node = @head
+        @head = new_node
+        data
+    end
+
     def find_tail
         node = @head
         if node != node.next_node
