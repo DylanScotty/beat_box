@@ -94,5 +94,17 @@ RSpec.describe Node do
         expect(list.append("plop")).to eq("plop")
     end
 
+    it 'can return a string with "plop"' do
+        list = LinkedList.new
+        list.append("plop")
+        expect(list.to_string).to eq("plop")
+    end
+
+    it 'appends a node with the data "suu"' do 
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        expect(list.append("suu")).to eq("suu")
+    end
 
 end
