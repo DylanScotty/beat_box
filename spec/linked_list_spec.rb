@@ -114,4 +114,13 @@ RSpec.describe Node do
         expect(list.prepend("dop")).to eq("dop")
     end
 
+    it 'returns a string with "dop plop suu"' do 
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        expect(list.to_string).to eq("dop plop suu")
+    end
+
+
 end
