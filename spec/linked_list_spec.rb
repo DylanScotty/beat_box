@@ -165,4 +165,34 @@ RSpec.describe Node do
         list.insert(3, "shu")
         expect(list.to_string).to eq("deep woo shi shu blop")
     end
+
+    it 'finds a data point and returns the values' do
+        list = LinkedList.new
+        list.append("shi")
+        list.append("blop")
+        list.prepend("deep")
+        list.insert(1, "woo")
+        list.insert(3, "shu")
+        expect(list.find(2, 1)).to eq("shi")
+    end
+
+    it 'finds multipule data point and returns the values' do
+        list = LinkedList.new
+        list.append("shi")
+        list.append("blop")
+        list.prepend("deep")
+        list.insert(1, "woo")
+        list.insert(3, "shu")
+        expect(list.find(1, 3)).to eq("woo shi shu")
+    end
+
+    it 'can determine if a beat is in the list' do
+        list = LinkedList.new
+        list.append("shi")
+        list.append("blop")
+        list.prepend("deep")
+        list.insert(1, "woo")
+        list.insert(3, "shu")
+        expect(list.includes?("deep")).to true
+    end
 end

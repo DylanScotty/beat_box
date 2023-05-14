@@ -38,6 +38,23 @@ class LinkedList
         data
     end
 
+    def find(start, count)
+        current_node = @head
+        index = 0
+        while current_node && index < start
+            current_node = current_node.next_node
+            index += 1
+        end
+        
+        beats =[]
+        while current_node && beats.length < count
+            beats << current_node.data
+            current_node = current_node.next_node
+        end
+
+        beats.join(" ")
+    end
+
     def find_tail
         node = @head
         if node != node.next_node
