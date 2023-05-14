@@ -122,5 +122,47 @@ RSpec.describe Node do
         expect(list.to_string).to eq("dop plop suu")
     end
 
+    it 'returns a count of 3 when dop is added' do
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        expect(list.count).to eq(3)
+    end
 
+    it 'uses a insert method to add in a data point' do
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        expect(list.insert(1, "woo")).to eq("woo")
+    end
+
+    it 'returns a string with dop woo plop suu' do
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        list.insert(1, "woo")
+        expect(list.to_string).to eq("dop woo plop suu")
+    end
+
+    it 'returns a string with dop woo plop suu' do
+        list = LinkedList.new
+        list.append("plop")
+        list.append("suu")
+        list.prepend("dop")
+        list.insert(1, "woo")
+        expect(list.to_string).to eq("dop woo plop suu")
+    end
+
+    it 'returns a string with "deep woo shi shu blop' do
+        list = LinkedList.new
+        list.append("shi")
+        list.append("blop")
+        list.prepend("deep")
+        list.insert(1, "woo")
+        list.insert(3, "shu")
+        expect(list.to_string).to eq("deep woo shi shu blop")
+    end
 end
