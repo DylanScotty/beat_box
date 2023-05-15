@@ -38,6 +38,15 @@ class LinkedList
         data
     end
 
+    def includes?(beat)
+        current_node = @head
+        while current_node
+            return true if current_node.data == beat
+            current_node = current_node.next_node
+        end
+        false
+    end
+
     def find(start, count)
         current_node = @head
         index = 0

@@ -13,7 +13,7 @@ RSpec.describe Node do
         expect(list.append("doop")).to eq("doop")
     end
 
-    it 'will have next node after head to return nil"' do
+    it 'will have next node after head return nil"' do
         list = LinkedList.new
         list.append("doop")
         expect(list.head.next_node).to eq(nil)
@@ -193,6 +193,27 @@ RSpec.describe Node do
         list.prepend("deep")
         list.insert(1, "woo")
         list.insert(3, "shu")
-        expect(list.includes?("deep")).to true
+        expect(list.includes?("deep")).to eq true
     end
+
+    it 'can determine if a beat is not in the list' do
+        list = LinkedList.new
+        list.append("shi")
+        list.append("blop")
+        list.prepend("deep")
+        list.insert(1, "woo")
+        list.insert(3, "shu")
+        expect(list.includes?("dep")).to eq false
+    end
+
+    it 'can pop items from the list' do 
+        list = LinkedList.new
+        list.append("shi")
+        list.append("blop")
+        list.prepend("deep")
+        list.insert(1, "woo")
+        list.insert(3, "shu")
+        expect(list.pop).to eq("blop")
+    end
+
 end
