@@ -47,6 +47,26 @@ class LinkedList
         false
     end
 
+    def pop
+        if @head.nil?
+            nil
+        elsif @head.next_node.nil?
+            popped_data = @head.data
+            @head = nil
+            popped.data
+        else
+            previous_node = nil
+            current_node = @head
+            while current_node.next_node
+                previous_node = current_node
+                current_node = current_node.next_node
+            end
+            popped_data = current_node.data
+            previous_node.next_node = nil
+            popped_data
+        end
+    end
+
     def find(start, count)
         current_node = @head
         index = 0
