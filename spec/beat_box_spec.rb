@@ -13,4 +13,10 @@ RSpec.describe BeatBox do
         expect(bb.list).to be_a_instance_of(LinkedList)
     end
 
+    it 'returns list head as nil' do
+        bb = BeatBox.new
+        expect(bb.list.head).to eq(nil)
+    end
+
+
 end
