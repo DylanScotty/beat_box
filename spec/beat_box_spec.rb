@@ -18,5 +18,10 @@ RSpec.describe BeatBox do
         expect(bb.list.head).to eq(nil)
     end
 
+    it 'is able to append the list with deep doo ditt' do
+        bb = BeatBox.new
+        expect(bb.append("deep doo ditt")).to eq("deep doo ditt")
+    end
+
 
 end
