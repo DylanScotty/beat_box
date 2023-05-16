@@ -216,4 +216,16 @@ RSpec.describe Node do
         expect(list.pop).to eq("blop")
     end
 
+    it ' can string dop woo plop suu' do
+        list = LinkedList.new
+        list.append("shi")
+        list.append("blop")
+        list.prepend("deep")
+        list.insert(1, "woo")
+        list.insert(3, "shu")
+        list.pop
+        list.pop
+        expect(list.to_string).to eq("deep woo shi")
+    end
+
 end
