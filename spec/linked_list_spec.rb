@@ -1,7 +1,11 @@
 require "./lib/linked_list"
 require "./lib/node"
 
-RSpec.describe Node do
+RSpec.describe LinkedList do
+    it 'is an instance of LinkedList' do
+        list = LinkedList.new
+        expect(LinkedList.new).to be_a_instance_of(LinkedList)
+    end
 
     it 'has head equal to nil' do
         list = LinkedList.new
