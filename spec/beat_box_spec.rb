@@ -41,6 +41,13 @@ RSpec.describe BeatBox do
         expect(bb.append("woo hoo shu")).to eq("woo hoo shu")
     end
 
+    it 'can count the number of beats' do
+        bb = BeatBox.new
+        bb.append("deep doo ditt")
+        bb.append("woo hoo shu")
+        expect(bb.count).to eq(6)
+    end
+
 
 
 

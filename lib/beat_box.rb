@@ -9,4 +9,8 @@ class BeatBox
         @list.append(data)
     end
 
+    def count
+        @list.count
+    end
+
 end
