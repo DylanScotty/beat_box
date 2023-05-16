@@ -85,12 +85,12 @@ class LinkedList
     end
 
     def find_tail
-        node = @head
-        if node != node.next_node
-            return node
-        elsif node != node.next_node 
-            while (node = node.next_node)
-                return node
+        current_node = @head
+        if current_node != current_node.next_node
+            return current_node
+        elsif current_node != current_node.next_node 
+            while (current_node = current_node.next_node)
+                return current_node
             end
         end
     end
