@@ -6,6 +6,10 @@ class BeatBox
     end
 
     def append(beats)
-        @list.append(beats)
+        beats.split.each do |beat|
+        @list.append(beat)
+        end
+        beats
     end
+
 end

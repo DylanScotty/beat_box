@@ -23,5 +23,13 @@ RSpec.describe BeatBox do
         expect(bb.append("deep doo ditt")).to eq("deep doo ditt")
     end
 
+    it 'returns with head node with the data being deep' do
+        bb = BeatBox.new
+        bb.append("deep doo ditt")
+        expect(bb.list.head.data).to eq("deep")
+    end
+
+
+
 
 end
