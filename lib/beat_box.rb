@@ -5,11 +5,8 @@ class BeatBox
         @list = LinkedList.new
     end
 
-    def append(beats)
-        beats.split.each do |beat|
-        @list.append(beat)
-        end
-        beats
+    def append(data)
+        @list.append(data)
     end
 
 end

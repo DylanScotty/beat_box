@@ -6,11 +6,14 @@ class LinkedList
     end
 
     def append(data)
-        if @head
-            find_tail.next_node = Node.new(data)
-        else
-            @head = Node.new(data)
-        end
+        beats = data.split(' ')
+        beats.each do |beat|
+         if @head.nil?
+             @head = Node.new(beat)
+         else
+             find_tail.next_node = Node.new(beat)
+         end
+      end
         data
     end
 
@@ -86,13 +89,10 @@ class LinkedList
 
     def find_tail
         current_node = @head
-        if current_node != current_node.next_node
-            return current_node
-        elsif current_node != current_node.next_node 
-            while (current_node = current_node.next_node)
-                return current_node
-            end
+        while current_node && current_node.next_node
+            current_node = current_node.next_node
         end
+        current_node
     end
 
     def count
